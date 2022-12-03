@@ -35,16 +35,25 @@
     }
     else {
       $('#ho_ten_female').val(ho_ten);
-      $('#tuoi_female').val(tuoi)
-      $('#cung_hoang_dao_female').val(cung_hoang_dao)
-      $('#so_dien_thoai_female').val(so_dien_thoai)
-      $('#dia_chi_female').val(dia_chi)
-      $('#so_thich_female').val(so_thich)
+      $('#tuoi_female').val(tuoi);
+      $('#cung_hoang_dao_female').val(cung_hoang_dao);
+      $('#so_dien_thoai_female').val(so_dien_thoai);
+      $('#dia_chi_female').val(dia_chi);
+      $('#so_thich_female').val(so_thich);
       setTimeout(function () {
         $('#tableFemale').removeClass('tat');
         $("input").attr('readonly', true);
         $('#t_t').addClass('tat');
+         axios.get(' http://localhost:3000/dsgacha_nam').then(function (response) {
+          $('#ho_ten_male').val(response.data[0].name);
+          $('#tuoi_male').val(response.data[0].age);
+          $('#cung_hoang_dao_male').val(response.data[0].cunghoangdao);
+          $('#so_dien_thoai_male').val(response.data[0].SDT);
+          $('#dia_chi_male').val(response.data[0].diachi);
+          $('#so_thich_male').val(response.data[0].Sothich);
+        });
         $('#tableMale').removeClass('tat');
+  
       }, 1000);
     }
   }

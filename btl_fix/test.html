@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
@@ -45,7 +46,7 @@
           </tr>
           <tr>
             <th scope="row">số điện thoại</th>
-            <td><input id="so_dien_thoai_male" type="number" value="" min="100000000" max="9999999999"></td> 
+            <td><input id="so_dien_thoai_male" type="text" value="" min="100000000" max="9999999999"></td> 
           </tr>
           <tr>
             <th scope="row">địa chỉ</th>
@@ -87,7 +88,7 @@
           </tr>
           <tr>
             <th scope="row">số điện thoại</th>
-            <td><input id="so_dien_thoai_female" type="number" value="" min="100000000" max="9999999999"></td> 
+            <td><input id="so_dien_thoai_female" type="text" value="" min="100000000" max="9999999999"></td> 
           </tr>
           <tr>
             <th scope="row">địa chỉ</th>
@@ -132,7 +133,7 @@
         </tr>
         <tr>
           <th scope="row">số điện thoại</th>
-          <td><input id="so_dien_thoai" type="number" value="" min="100000000" max="9999999999"></td> 
+          <td><input id="so_dien_thoai" type="text" value="" min="100000000" max="9999999999"></td> 
         </tr>
         <tr>
           <th scope="row">địa chỉ</th>
@@ -146,6 +147,7 @@
     </table>
     
   </div>  
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="/btl_fix/changeFemale.js"></script>
   <script src="/btl_fix/changeMale.js"></script>
   <script src="/btl_fix/test.js"></script>

@@ -1,4 +1,4 @@
 console.log([axios])
-axios.get('http://localhost:3000/posts').then(function(response){
-  console.log(response);
+axios.get(' http://localhost:3000/dsgacha_nam').then(function(response){
+  console.log(response.data);
 });
