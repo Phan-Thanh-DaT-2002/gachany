@@ -1,7 +1,6 @@
 function changeMale() {
   $('#buttonMale').addClass('tat');
   $('#infoFemale').addClass('tat');
-  $('#tableFemale').removeClass('tat');
   lay_thong_tin_male();
 }
 function lay_thong_tin_male() {
@@ -42,18 +41,10 @@ function check_changeMale() {
     $('#so_thich_male').val(so_thich)
     setTimeout(function () {
       $('#tableMale').removeClass('tat');
+      $("input").attr('readonly', true);
       $('#t_t').addClass('tat');
+      $('#tableFemale').removeClass('tat');
+
     }, 1000);
   }
-}
-function check_name(name) {
-  name.trim();
-  var D = 0;
-  for (var i = 0; i < name.split(' ').length; i++) {
-    if (name.split(' ')[i] !== '') {
-      D++;
-    }
-  }
-  if (D < 2) { return false; }
-  else { return true; }
 }

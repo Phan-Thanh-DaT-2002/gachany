@@ -3,7 +3,6 @@
     lay_thong_tin_female();
     $('#infoFemale').addClass('tat');
     $('#buttonMale').addClass('tat');
-    $('#tableMale').removeClass('tat');
   }
   function lay_thong_tin_female() {
     $('#t_t').append(` 
@@ -43,7 +42,9 @@
       $('#so_thich_female').val(so_thich)
       setTimeout(function () {
         $('#tableFemale').removeClass('tat');
+        $("input").attr('readonly', true);
         $('#t_t').addClass('tat');
+        $('#tableMale').removeClass('tat');
       }, 1000);
     }
   }
