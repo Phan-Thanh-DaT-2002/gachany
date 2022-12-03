@@ -11,6 +11,8 @@
     crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/btl_fix/test.css">
+  <script src="/btl_fix/jquery-3.6.1.js"></script>
+
   <title>gachany</title>
 </head>
 
@@ -35,7 +37,7 @@
           </tr>
           <tr>
             <th scope="row">tuổi</th>
-            <td><input id="tuoi_male" type="text" value=""></td> 
+            <td><input id="tuoi_male" type="number" value="" min="1" max="130"></td> 
           </tr>
           <tr>
             <th scope="row">cung hoàng đạo</th>
@@ -43,7 +45,7 @@
           </tr>
           <tr>
             <th scope="row">số điện thoại</th>
-            <td><input id="so_dien_thoai_male" type="text" value=""></td> 
+            <td><input id="so_dien_thoai_male" type="number" value="" min="100000000" max="9999999999"></td> 
           </tr>
           <tr>
             <th scope="row">địa chỉ</th>
@@ -63,11 +65,45 @@
       <image class="img" src="/btl/image/demo1.png"></image>
     </div>
     <div class="col-sm-2 col-xs-2 infoFemale">
-      <h2>Thông tin của bạn</h2>
+      <button type="button" id="infoFemale" onclick="changeFemale();" class="btn btn-info ">click me</button>
+      <table id="tableFemale" class="table tat">
+        <thead class="table-light">
+          <tr>
+            <th colspan="2" scope="col">Thông tin của nữ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">họ và tên:</th>
+            <td><input id="ho_ten_female" type="text" value=""></td> 
+          </tr>
+          <tr>
+            <th scope="row">tuổi</th>
+            <td><input id="tuoi_female" type="number" value="" min="1" max="130"></td> 
+          </tr>
+          <tr>
+            <th scope="row">cung hoàng đạo</th>
+            <td><input id="cung_hoang_dao_female" type="text" value=""></td> 
+          </tr>
+          <tr>
+            <th scope="row">số điện thoại</th>
+            <td><input id="so_dien_thoai_female" type="number" value="" min="100000000" max="9999999999"></td> 
+          </tr>
+          <tr>
+            <th scope="row">địa chỉ</th>
+            <td><input id="dia_chi_female" type="text" value=""></td> 
+          </tr>
+          <tr>
+            <th scope="row">sở thích</th>
+            <td><input id="so_thich_female" type="text" value=""></td> 
+          </tr>
+        </tbody>
+      </table>
+      <!-- <h2>Thông tin của bạn</h2>
       <p>Nguyễn Thị H</p>
       <p>22 tuổi</p>
       <p>Sở thích: ...</p>
-      <p>///////////////////</p>
+      <p>///////////////////</p> -->
     </div>
 
   </div>
@@ -75,7 +111,7 @@
     <h4>CẢNH BÁO:NGƯỜI KHÔNG GACHA LÀ NGƯỜI THẮNG!!!</h4>
   </div>
   <div id="t_t" class="tat">
-    <table id="tableMale" class="table ">
+    <table  class="table ">
       <thead class="table-light">
         <tr>
           <th colspan="2" scope="col">Thông tin của nam</th>
@@ -88,7 +124,7 @@
         </tr>
         <tr>
           <th scope="row">tuổi</th>
-          <td><input id="tuoi" type="text" value=""></td> 
+          <td><input id="tuoi" type="number" value="" min="1" max="130"></td> 
         </tr>
         <tr>
           <th scope="row">cung hoàng đạo</th>
@@ -96,7 +132,7 @@
         </tr>
         <tr>
           <th scope="row">số điện thoại</th>
-          <td><input id="so_dien_thoai" type="text" value=""></td> 
+          <td><input id="so_dien_thoai" type="number" value="" min="100000000" max="9999999999"></td> 
         </tr>
         <tr>
           <th scope="row">địa chỉ</th>
@@ -108,10 +144,9 @@
         </tr>
       </tbody>
     </table>
-    <div class="center_bt_check">
-      <button type="button" onclick="check_changeMale();" class="btn btn-success">check</button>
-    </div>
-  </div>
-  <script src="/btl_fix/test.js"></script>
+    
+  </div>  
+  <script src="/btl_fix/changeFemale.js"></script>
+  <script src="/btl_fix/changeMale.js"></script>
 </body>
 </html>
