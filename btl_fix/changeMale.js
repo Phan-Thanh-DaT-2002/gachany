@@ -1,5 +1,7 @@
 function changeMale() {
   $('#buttonMale').addClass('tat');
+  $('#infoFemale').addClass('tat');
+  $('#tableFemale').removeClass('tat');
   lay_thong_tin_male();
 }
 function lay_thong_tin_male() {

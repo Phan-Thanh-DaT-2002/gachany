@@ -2,7 +2,8 @@
   function changeFemale() {    
     lay_thong_tin_female();
     $('#infoFemale').addClass('tat');
-
+    $('#buttonMale').addClass('tat');
+    $('#tableMale').removeClass('tat');
   }
   function lay_thong_tin_female() {
     $('#t_t').append(` 
