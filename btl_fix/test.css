@@ -77,6 +77,22 @@ th {
  margin-left:-250px;
  margin-top:-250px;
 }
+.gachany{
+  width:20vh;
+  height:20vhx;
+  margin:0 auto;
+  background:#ffffff;
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin-left:-250px;
+  margin-top:-250px;
+}
+/* .imgMale, .imgFemale, .gachany{
+  position: absolute;
+} */
+
+
 /* input{
   border: none;
 } */

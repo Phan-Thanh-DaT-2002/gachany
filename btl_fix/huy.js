@@ -1,6 +1,3 @@
-
-
-
 function huy() {
   $('#buttonMale').removeClass('tat');
   $('.center_bt_check').remove();

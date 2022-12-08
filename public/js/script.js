@@ -1,9 +1,19 @@
 function getRandomArbitrary(min, max){
 	return Math.floor(Math.random() * (max - min)) + min;
 }
+axios.get(' http://localhost:3000/dsgacha_nam').then(function (response) {
+console.log(response.data);
+  let imgs =``;
+  for (var i = 0; i < response.data.length; i++) {
+    imgs += `<dd><img src=" ${response.data[i].anh}" /></dd>`;
+  }
+  document.getElementById('anhs').innerHTML = imgs;
+})
+
 
 $(document).ready(function(){
 	setInterval(function(){
+
 		var screenHeight = $(document).height();
 		var screenWidth = $(document).width();
 		var startLeft = getRandomArbitrary(0, screenWidth);
@@ -39,7 +49,10 @@ $(document).ready(function(){
 	},500);
 });
 window.onload = function () {
+	
 	var dds = document.getElementsByTagName('dd');
+	console.log(dds);
+	console.log(dds.length);
 	var dl = document.getElementsByTagName('dl')[0];
 	dl.style.transform = "rotateX(-10deg) rotateY(0deg)";
 	for (var i = 0; i < dds.length; i++) {
@@ -95,3 +108,4 @@ window.onload = function () {
 		}, 10);
 	}
 }
+

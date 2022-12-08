@@ -44,14 +44,14 @@
         $('#tableFemale').removeClass('tat');
         $("input").attr('readonly', true);
         $('#t_t').addClass('tat');
-         axios.get(' http://localhost:3000/dsgacha_nam').then(function (response) {
-          $('#ho_ten_male').val(response.data[0].name);
-          $('#tuoi_male').val(response.data[0].age);
-          $('#cung_hoang_dao_male').val(response.data[0].cunghoangdao);
-          $('#so_dien_thoai_male').val(response.data[0].SDT);
-          $('#dia_chi_male').val(response.data[0].diachi);
-          $('#so_thich_male').val(response.data[0].Sothich);
-        });
+         
+          $('#ho_ten_male').val('???????????');
+          $('#tuoi_male').val('???????????');
+          $('#cung_hoang_dao_male').val('???????????');
+          $('#so_dien_thoai_male').val('???????????');
+          $('#dia_chi_male').val('???????????');
+          $('#so_thich_male').val('???????????');
+       
         $('#tableMale').removeClass('tat');
   
       }, 1000);

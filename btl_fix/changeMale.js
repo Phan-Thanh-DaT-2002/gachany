@@ -43,15 +43,14 @@ function check_changeMale() {
       $('#tableMale').removeClass('tat');
       $("input").attr('readonly', true);
       $('#t_t').addClass('tat');
-      axios.get(' http://localhost:3000/dsgacha_nu').then(function (response) {
-      $('#ho_ten_female').val(response.data[0].name);
-      $('#tuoi_female').val(response.data[0].age);
-      $('#cung_hoang_dao_female').val(response.data[0].cunghoangdao);
-      $('#so_dien_thoai_female').val(response.data[0].SDT);
-      $('#dia_chi_female').val(response.data[0].diachi);
-      $('#so_thich_female').val(response.data[0].Sothich);
-      });
+      $('#ho_ten_female').val('???????????');
+      $('#tuoi_female').val('???????????');
+      $('#cung_hoang_dao_female').val('???????????');
+      $('#so_dien_thoai_female').val('???????????');
+      $('#dia_chi_female').val('???????????');
+      $('#so_thich_female').val('???????????');
       $('#tableFemale').removeClass('tat');
+      $('#gachany').removeClass('tat');
     }, 1000);
   }
 }
