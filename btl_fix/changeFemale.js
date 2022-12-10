@@ -7,9 +7,10 @@
   function lay_thong_tin_female() {
     $('#t_t').append(` 
     <div class="center_bt_check">
-    <button type="button" id="check_changeFemale" onclick="check_changeFemale();" class="btn btn-success">check</button>
-    <button type="button" id="huy_female" onclick="huy();" class="btn btn-outline-danger">huy</button>
-    </div>
+    <button id="check_changeMale" type="button" onclick="check_changeMale();" class="btn btn-success">Nhập</button> 
+    <br>
+    <button type="button" id="huy_male" onclick="huy();" class="btn btn-outline-danger">Hủy</button>
+  </div>
   </div>
     `);
     $('#t_t').removeClass('tat');
