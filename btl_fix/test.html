@@ -18,43 +18,45 @@
   <title>gachany</title>
 </head>
 
-<body >
+<body>
   <div class="header row">
-    <div class="col-sm-1 col-xs-1 logo">logo</div>
-    <div class="col-sm-11 col-xs-11">GACHA NGUỜI YÊU(NƠI GACHA UY TÍN NHẤT VIỆT NAM)</div>
+    <div class="header">
+      <p class="logo">GACHANY</p>
+      <p>GACHA NGUỜI YÊU (NƠI GACHA UY TÍN NHẤT VIỆT NAM)</p>
+    </div>
   </div>
   <div  class="content row">
     <div class="col-sm-2 col-xs-2 infoMale">
-      <button type="button" id="buttonMale" onclick="changeMale();" class="btn btn-info ">click me</button>
+      <button type="button" id="buttonMale" onclick="changeMale();" class="btn btn-info ">Bạn là nam? Click here</button>
       <table id="tableMale" class="table tat">
         <thead class="table-light">
           <tr>
-            <th colspan="2" scope="col">Thông tin của nam</th>
+            <th colspan="2" scope="col">Thông tin của bạn trai</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th scope="row">họ và tên:</th>
+            <th scope="row">Họ và tên:</th>
             <td><input id="ho_ten_male" type="text" value=""></td> 
           </tr>
           <tr>
-            <th scope="row">tuổi</th>
+            <th scope="row">Tuổi</th>
             <td><input id="tuoi_male" type="number" value="" min="1" max="130"></td> 
           </tr>
           <tr>
-            <th scope="row">cung hoàng đạo</th>
+            <th scope="row">Cung hoàng đạo</th>
             <td><input id="cung_hoang_dao_male" type="text" value=""></td> 
           </tr>
           <tr>
-            <th scope="row">số điện thoại</th>
+            <th scope="row">Số điện thoại</th>
             <td><input id="so_dien_thoai_male" type="text" value="" min="100000000" max="9999999999"></td> 
           </tr>
           <tr>
-            <th scope="row">địa chỉ</th>
+            <th scope="row">Địa chỉ</th>
             <td><input id="dia_chi_male" type="text" value=""></td> 
           </tr>
           <tr>
-            <th scope="row">sở thích</th>
+            <th scope="row">Sở thích</th>
             <td><input id="so_thich_male" type="text" value=""></td> 
           </tr>
         </tbody>
@@ -67,36 +69,36 @@
       <image class="img" src="/btl/image/demo1.png"></image>
     </div>
     <div class="col-sm-2 col-xs-2 infoFemale">
-      <button type="button" id="infoFemale" onclick="changeFemale();" class="btn btn-info ">click me</button>
+      <button type="button" id="infoFemale" onclick="changeFemale();" class="btn btn-info ">Bạn là nữ? Click here</button>
       <table id="tableFemale" class="table tat">
         <thead class="table-light">
           <tr>
-            <th colspan="2" scope="col">Thông tin của nữ</th>
+            <th colspan="2" scope="col">Thông tin của bạn gái</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th scope="row">họ và tên:</th>
+            <th scope="row">Họ và tên:</th>
             <td><input id="ho_ten_female" type="text" value=""></td> 
           </tr>
           <tr>
-            <th scope="row">tuổi</th>
+            <th scope="row">Tuổi</th>
             <td><input id="tuoi_female" type="number" value="" min="1" max="130"></td> 
           </tr>
           <tr>
-            <th scope="row">cung hoàng đạo</th>
+            <th scope="row">Cung hoàng đạo</th>
             <td><input id="cung_hoang_dao_female" type="text" value=""></td> 
           </tr>
           <tr>
-            <th scope="row">số điện thoại</th>
+            <th scope="row">Số điện thoại</th>
             <td><input id="so_dien_thoai_female" type="text" value="" min="100000000" max="9999999999"></td> 
           </tr>
           <tr>
-            <th scope="row">địa chỉ</th>
+            <th scope="row">Địa chỉ</th>
             <td><input id="dia_chi_female" type="text" value=""></td> 
           </tr>
           <tr>
-            <th scope="row">sở thích</th>
+            <th scope="row">Sở thích</th>
             <td><input id="so_thich_female" type="text" value=""></td> 
           </tr>
         </tbody>
@@ -110,38 +112,38 @@
 
   </div>
   <div class="footer">
-    <h4>CẢNH BÁO:NGƯỜI KHÔNG GACHA LÀ NGƯỜI THẮNG!!!</h4>
+    <p class="warning">CẢNH BÁO: NGƯỜI KHÔNG GACHA LÀ NGƯỜI THẮNG!!!</p>
   </div>
   <div id="t_t" class="tat">
     <table  class="table ">
       <thead class="table-light">
         <tr>
-          <th colspan="2" scope="col">Thông tin của nam</th>
+          <th colspan="2" scope="col">Điền thông tin của bạn vào đây</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th scope="row">họ và tên:</th>
+          <th scope="row">Họ và tên:</th>
           <td><input id="ho_ten" type="text" value=""></td> 
         </tr>
         <tr>
-          <th scope="row">tuổi</th>
+          <th scope="row">Tuổi:</th>
           <td><input id="tuoi" type="number" value="" min="1" max="130"></td> 
         </tr>
         <tr>
-          <th scope="row">cung hoàng đạo</th>
+          <th scope="row">Cung hoàng đạo:</th>
           <td><input id="cung_hoang_dao" type="text" value=""></td> 
         </tr>
         <tr>
-          <th scope="row">số điện thoại</th>
+          <th scope="row">Số điện thoại:</th>
           <td><input id="so_dien_thoai" type="text" value="" min="100000000" max="9999999999"></td> 
         </tr>
         <tr>
-          <th scope="row">địa chỉ</th>
+          <th scope="row">Địa chỉ:</th>
           <td><input id="dia_chi" type="text" value=""></td> 
         </tr>
         <tr>
-          <th scope="row">sở thích</th>
+          <th scope="row">Sở thích:</th>
           <td><input id="so_thich" type="text" value=""></td> 
         </tr>
       </tbody>
