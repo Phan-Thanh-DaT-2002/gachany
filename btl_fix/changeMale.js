@@ -16,7 +16,6 @@ function lay_thong_tin_male() {
 
 function check_changeMale() {
   var ho_ten = $('#ho_ten').val();
-  console.log(ho_ten)
   var tuoi = $('#tuoi').val();
   var cung_hoang_dao = $('#cung_hoang_dao').val();
   var so_dien_thoai = $('#so_dien_thoai').val();

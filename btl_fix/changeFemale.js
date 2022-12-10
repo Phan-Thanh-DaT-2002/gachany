@@ -7,7 +7,7 @@
   function lay_thong_tin_female() {
     $('#t_t').append(` 
     <div class="center_bt_check">
-    <button id="check_changeMale" type="button" onclick="check_changeMale();" class="btn btn-success">Nhập</button> 
+    <button id="check_changeFemale" type="button" onclick="check_changeFemale();" class="btn btn-success">Nhập</button> 
     <br>
     <button type="button" id="huy_male" onclick="huy();" class="btn btn-outline-danger">Hủy</button>
   </div>
