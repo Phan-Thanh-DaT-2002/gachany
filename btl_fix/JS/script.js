@@ -1,8 +1,8 @@
 function getRandomArbitrary(min, max){
 	return Math.floor(Math.random() * (max - min)) + min;
 }
-axios.get(' http://localhost:3000/dsgacha_nam').then(function (response) {
-console.log(response.data);
+axios.get('http://localhost:3000/dsgacha_nam').then(function (response) {
+console.log(response.data[1].anh);
   let imgs =``;
   for (var i = 0; i < response.data.length; i++) {
     imgs += `<dd><img src=" ${response.data[i].anh}" /></dd>`;
