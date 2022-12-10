@@ -1,8 +1,14 @@
+
 function getRandomArbitrary(min, max){
 	return Math.floor(Math.random() * (max - min)) + min;
 }
-axios.get('http://localhost:3000/dsgacha_nam').then(function (response) {
-console.log(response.data[1].anh);
+var database = localStorage.getItem('database');
+var db;
+if (database ==='male'){db = 'http://localhost:3000/dsgacha_nam'}
+	else if (database ==='female'){db = 'http://localhost:3000/dsgacha_nu'}
+
+axios.get(db).then(function (response) {
+
   let imgs =``;
   for (var i = 0; i < response.data.length; i++) {
     imgs += `<dd><img src=" ${response.data[i].anh}" /></dd>`;
@@ -13,6 +19,7 @@ console.log(response.data[1].anh);
 
 $(document).ready(function(){
 	setInterval(function(){
+	
 
 		var screenHeight = $(document).height();
 		var screenWidth = $(document).width();
@@ -49,7 +56,6 @@ $(document).ready(function(){
 	},500);
 });
 window.onload = function () {
-	
 	var dds = document.getElementsByTagName('dd');
 	console.log(dds);
 	console.log(dds.length);

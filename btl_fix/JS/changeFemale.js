@@ -1,5 +1,4 @@
-
-  function changeFemale() {    
+function changeFemale() {    
     lay_thong_tin_female();
     $('#infoFemale').addClass('tat');
     $('#buttonMale').addClass('tat');
@@ -16,8 +15,9 @@
     $('#t_t').removeClass('tat');
 
   }
-  
+ 
   function check_changeFemale() {
+    
     var ho_ten = $('#ho_ten').val();
     var tuoi = $('#tuoi').val();
     var cung_hoang_dao = $('#cung_hoang_dao').val();
@@ -55,7 +55,7 @@
           $('#tableMale').removeClass('tat');
           setTimeout(function() {
             $('#gachany').removeClass('tat');
-            var database = new Object("male")
+            localStorage.setItem('database',"male");
             console.log(database);
           }, 3000)
       }, 1000);

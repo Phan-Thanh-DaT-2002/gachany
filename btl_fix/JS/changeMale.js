@@ -51,6 +51,8 @@ function check_changeMale() {
       $('#tableFemale').removeClass('tat');
       setTimeout(function() {
         $('#gachany').removeClass('tat');
+        localStorage.setItem('database',"female");
+        console.log(database);
       }, 3000)
     }, 1000);
   }
