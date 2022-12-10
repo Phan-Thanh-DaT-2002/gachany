@@ -50,7 +50,9 @@ function check_changeMale() {
       $('#dia_chi_female').val('???????????');
       $('#so_thich_female').val('???????????');
       $('#tableFemale').removeClass('tat');
-      $('#gachany').removeClass('tat');
+      setTimeout(function() {
+        $('#gachany').removeClass('tat');
+      }, 3000)
     }, 1000);
   }
 }

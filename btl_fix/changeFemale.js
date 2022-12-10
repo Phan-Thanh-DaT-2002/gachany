@@ -51,9 +51,12 @@
           $('#so_dien_thoai_male').val('???????????');
           $('#dia_chi_male').val('???????????');
           $('#so_thich_male').val('???????????');
-       
-        $('#tableMale').removeClass('tat');
-  
+          $('#tableMale').removeClass('tat');
+          setTimeout(function() {
+            $('#gachany').removeClass('tat');
+            var database = new Object("male")
+            console.log(database);
+          }, 3000)
       }, 1000);
     }
   }

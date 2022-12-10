@@ -75,19 +75,19 @@ window.onload = function () {
 		var rotateY = transform.substr(transform.indexOf('rotateY(') + 8);
 		rotateX = parseInt(rotateX.substring(0, rotateX.indexOf('deg')));
 		rotateY = parseInt(rotateY.substring(0, rotateY.indexOf('deg')));
-		window.onmousemove = function (e) {
-			e = e || window.event;
-			var x = rotateX - (e.clientY - mouseY);
-			var y = rotateY + (e.clientX - mouseX);
-			if (x > 360 || x < -360)
-				x %= 360;
-			if (y > 360 || y < -360)
-				y %= 360;
-			dl.style.transform = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
-		}
-		window.onmouseup = function () {
-			window.onmousemove = null;
-		}
+		// window.onmousemove = function (e) {
+		// 	e = e || window.event;
+		// 	var x = rotateX - (e.clientY - mouseY);
+		// 	var y = rotateY + (e.clientX - mouseX);
+		// 	if (x > 360 || x < -360)
+		// 		x %= 360;
+		// 	if (y > 360 || y < -360)
+		// 		y %= 360;
+		// 	dl.style.transform = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
+		// }
+		// window.onmouseup = function () {
+		// 	window.onmousemove = null;
+		// }
 	}
 	function deal(dds, n) {
 		var speed = 700;
@@ -108,4 +108,3 @@ window.onload = function () {
 		}, 10);
 	}
 }
-
