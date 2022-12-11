@@ -30,14 +30,15 @@ $('#yes').click(function(){
 });
 
 $('#no').click(function(){
+	alert('nếu không thì bạn sẽ không được quay tiếp và bạn sẽ vào database của chúng tôi?')
 	$('#yes').css('display', 'none');
 	$('#no').css('display', 'none');
 	
 		axios.post(db_con_lai,newUser)
 		.then(res => {
+			window.location.replace('http://127.0.0.1:5500/btl_fix/HTML/test.html')
 			return res;
 		});
-	
 });
 
 
@@ -95,15 +96,15 @@ window.onload = function () {
 	var dl = document.getElementsByTagName('dl')[0];
 	dl.style.transform = "rotateX(-10deg) rotateY(0deg)";
 	for (var i = 0; i < dds.length; i++) {
-		var inverted = document.createElement('div');
-		var inverteds = document.createElement('div');
+		// var inverted = document.createElement('div');
+		// var inverteds = document.createElement('div');
 		var img = document.createElement('img');
 		img.src = dds[i].getElementsByTagName('img')[0].src;
-		inverted.appendChild(img);
-		inverted.className = 'inverted';
-		inverteds.appendChild(inverted)
-		inverteds.className = 'inverteds';
-		dds[i].appendChild(inverteds);
+		// inverted.appendChild(img);
+		// inverted.className = 'inverted';
+		// inverteds.appendChild(inverted)
+		// inverteds.className = 'inverteds';
+		// dds[i].appendChild(inverteds);
 	}
 	deal(dds, dds.length - 1);
 	window.onmousedown = function (e) {
@@ -159,7 +160,7 @@ function dien_thong_tin(oject){
 function show(dtb){
 	$('#ho_ten_dtb').val(dtb.name);
 	$('#tuoi_dtb').val(dtb.age);
-	$('#cung_hoang_dao_dtb').val(dtb.Cunghoangdao);
+	$('#cung_hoang_dao_dtb').val(dtb.cunghoangdao);
 	$('#so_dien_thoai_dtb').val(dtb.SDT);
 	$('#dia_chi_dtb').val(dtb.diachi);
 	$('#so_thich_dtb').val(dtb.Sothich);
