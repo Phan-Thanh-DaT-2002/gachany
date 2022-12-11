@@ -116,7 +116,7 @@ th {
  margin-left:-250px;
  margin-top:-250px;
  border: 1px solid #ffffff;
-
+ border-radius: 10px;
 }
 #t_t th{
   border: 1px solid #ffffff;

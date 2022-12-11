@@ -6,13 +6,15 @@ function changeMale() {
 function lay_thong_tin_male() {
   $('#t_t').append(` 
   <div class="center_bt_check">
-  <button id="check_changeMale" type="button" onclick="check_changeMale();" class="btn btn-success">Nhập</button> 
+  <button id="check_changeMale" type="button" onclick="check_changeMale();" class="btn btn-success">nhap</button> 
   <br>
   <button type="button" id="huy_male" onclick="huy();" class="btn btn-outline-danger">Hủy</button>
 </div>
   `);
   $('#t_t').removeClass('tat');
 }
+
+
 
 function check_changeMale() {
   var ho_ten = $('#ho_ten').val();
@@ -21,8 +23,11 @@ function check_changeMale() {
   var so_dien_thoai = $('#so_dien_thoai').val();
   var dia_chi = $('#dia_chi').val();
   var so_thich = $('#so_thich').val();
-
-
+  var new_user_male = {
+    ho_ten, tuoi, cung_hoang_dao, so_dien_thoai,
+    dia_chi, so_thich, anh: null,
+  }
+ 
   if (ho_ten === '' || tuoi === '' || cung_hoang_dao === '' || so_dien_thoai === '' || dia_chi === '' || so_thich === '') { alert('bạn chưa nhập đủ thông tin') }
   else if (check_name(ho_ten) === false) {
     alert('họ và tên phải trên 1 từ chứ bạn nhỉ');
@@ -49,10 +54,11 @@ function check_changeMale() {
       $('#dia_chi_female').val('???????????');
       $('#so_thich_female').val('???????????');
       $('#tableFemale').removeClass('tat');
-      setTimeout(function() {
+      setTimeout(function () {
         $('#gachany').removeClass('tat');
-        localStorage.setItem('database',"female");
-        console.log(database);
+        localStorage.setItem('database', "female");
+        localStorage.setItem('new_user_male', JSON.stringify(new_user_male));
+        console.log(new_user_male);
       }, 3000)
     }, 1000);
   }

@@ -1,25 +1,59 @@
+$("input").attr('readonly', true);
 
-function getRandomArbitrary(min, max){
+function getRandomArbitrary(min, max) {
 	return Math.floor(Math.random() * (max - min)) + min;
 }
 var database = localStorage.getItem('database');
+
+
 var db;
-if (database ==='male'){db = 'http://localhost:3000/dsgacha_nam'}
-	else if (database ==='female'){db = 'http://localhost:3000/dsgacha_nu'}
+var db_con_lai;
+var newUser;
+if (database === 'male') {
+	var new_user_female = JSON.parse(localStorage.getItem('new_user_female'));
+	newUser = new_user_female;
+	db = 'http://localhost:3000/dsgacha_nam';
+	db_con_lai = 'http://localhost:3000/dsgacha_nu';
+	dien_thong_tin(new_user_female);
+}
+else if (database === 'female') {
+	db = 'http://localhost:3000/dsgacha_nu';
+	var new_user_male = JSON.parse(localStorage.getItem('new_user_male'));
+	newUser= new_user_male;
+	db_con_lai ='http://localhost:3000/dsgacha_nam';
+	dien_thong_tin(new_user_male);
+}
+
+$('#yes').click(function(){
+	$('#yes').css('display', 'none');
+	$('#no').css('display', 'none');
+});
+
+$('#no').click(function(){
+	$('#yes').css('display', 'none');
+	$('#no').css('display', 'none');
+	
+		axios.post(db_con_lai,newUser)
+		.then(res => {
+			return res;
+		});
+	
+});
+
 
 axios.get(db).then(function (response) {
 
-  let imgs =``;
-  for (var i = 0; i < response.data.length; i++) {
-    imgs += `<dd><img src=" ${response.data[i].anh}" /></dd>`;
-  }
-  document.getElementById('anhs').innerHTML = imgs;
+	let imgs = ``;
+	for (var i = 0; i < response.data.length; i++) {
+		imgs += `<dd><img src=" ${response.data[i].anh}" /></dd>`;
+	}
+	document.getElementById('anhs').innerHTML = imgs;
+show(response.data[0]);
 })
 
 
-$(document).ready(function(){
-	setInterval(function(){
-	
+$(document).ready(function () {
+	setInterval(function () {
 
 		var screenHeight = $(document).height();
 		var screenWidth = $(document).width();
@@ -31,34 +65,32 @@ $(document).ready(function(){
 		var snow = document.createElement('span');
 
 		$(snow).addClass('snow-item fa fa-heart').css({
-			'position'  : 'absolute',
-			'z-index'   : 'auto',
-			'color'     : '#ff0000',
-			'display'   : 'block',
-			'top'       : 0,
-			'left'      : startLeft,
-			'opacity'   : opacityR,
-			'font-size' : sizeR+'px'
+			'position': 'absolute',
+			'z-index': 'auto',
+			'color': '#ff0000',
+			'display': 'block',
+			'top': 0,
+			'left': startLeft,
+			'opacity': opacityR,
+			'font-size': sizeR + 'px'
 		})
-		.appendTo('body')
-		.animate({
-			'top'       : screenHeight-sizeR,
-			'left'      : endLeft
-		},{
-			duration : timeRun,
-			easing : 'linear',
-			complete:function(){
-				$(this).fadeOut('fast',function(){
-					$(this).remove();
-				});
-			}
-		});
-	},500);
+			.appendTo('body')
+			.animate({
+				'top': screenHeight - sizeR,
+				'left': endLeft
+			}, {
+				duration: timeRun,
+				easing: 'linear',
+				complete: function () {
+					$(this).fadeOut('fast', function () {
+						$(this).remove();
+					});
+				}
+			});
+	}, 500);
 });
 window.onload = function () {
 	var dds = document.getElementsByTagName('dd');
-	console.log(dds);
-	console.log(dds.length);
 	var dl = document.getElementsByTagName('dl')[0];
 	dl.style.transform = "rotateX(-10deg) rotateY(0deg)";
 	for (var i = 0; i < dds.length; i++) {
@@ -114,3 +146,22 @@ window.onload = function () {
 		}, 10);
 	}
 }
+
+function dien_thong_tin(oject){
+	$('#ho_ten').val(oject.ho_ten);
+	$('#tuoi').val(oject.tuoi);
+	$('#cung_hoang_dao').val(oject.cung_hoang_dao);
+	$('#so_dien_thoai').val(oject.so_dien_thoai);
+	$('#dia_chi').val(oject.dia_chi);
+	$('#so_thich').val(oject.so_thich);
+}
+function show(dtb){
+	$('#ho_ten_dtb').val(dtb.name);
+	$('#tuoi_dtb').val(dtb.age);
+	$('#cung_hoang_dao_dtb').val(dtb.Cunghoangdao);
+	$('#so_dien_thoai_dtb').val(dtb.SDT);
+	$('#dia_chi_dtb').val(dtb.diachi);
+	$('#so_thich_dtb').val(dtb.Sothich);
+	$('#img_dtb').attr('src',dtb.anh);
+}
+

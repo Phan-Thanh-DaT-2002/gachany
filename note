@@ -14,3 +14,4 @@ npm install touch-cli -g
 touch src/index.ts
 npm install -g ts-node
 npm run start:dev
+
