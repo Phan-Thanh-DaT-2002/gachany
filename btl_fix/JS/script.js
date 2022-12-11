@@ -48,7 +48,8 @@ axios.get(db).then(function (response) {
 		imgs += `<dd><img src=" ${response.data[i].anh}" /></dd>`;
 	}
 	document.getElementById('anhs').innerHTML = imgs;
-show(response.data[0]);
+
+show(response.data[Math.floor(Math.random()*10)]);
 })
 
 
