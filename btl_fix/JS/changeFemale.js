@@ -24,7 +24,10 @@ function changeFemale() {
     var so_dien_thoai = $('#so_dien_thoai').val();
     var dia_chi = $('#dia_chi').val();
     var so_thich = $('#so_thich').val();
-  
+    var new_user_female = {
+      ho_ten, tuoi, cung_hoang_dao, so_dien_thoai,
+      dia_chi, so_thich, anh: null,
+    }
   
     if (ho_ten === '' || tuoi === '' || cung_hoang_dao === '' || so_dien_thoai === '' || dia_chi === '' || so_thich === '') { alert('bạn chưa nhập đủ thông tin') }
     else if (check_name(ho_ten) === false) {
@@ -56,7 +59,8 @@ function changeFemale() {
           setTimeout(function() {
             $('#gachany').removeClass('tat');
             localStorage.setItem('database',"male");
-            console.log(database);
+            localStorage.setItem('new_user_female', JSON.stringify(new_user_female));
+            console.log(new_user_female);
           }, 3000)
       }, 1000);
     }
@@ -72,4 +76,3 @@ function changeFemale() {
     if (D < 2) { return false; }
     else { return true; }
   }
-

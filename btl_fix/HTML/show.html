@@ -32,7 +32,84 @@ lines (33 sloc) 1.33 KB
         </div>
     </dl>
     <!-- </div> -->
+    <div>
+    <table id="table" class="table " >
+        <thead class="table-light">
+          <tr>
+            <th colspan="2" scope="col">Thông tin của bạn </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Họ và tên:</th>
+            <td><input id="ho_ten" type="text" value=""></td> 
+          </tr>
+          <tr>
+            <th scope="row">Tuổi</th>
+            <td><input id="tuoi" type="number" value="" min="1" max="130"></td> 
+          </tr>
+          <tr>
+            <th scope="row">Cung hoàng đạo</th>
+            <td><input id="cung_hoang_dao" type="text" value=""></td> 
+          </tr>
+          <tr>
+            <th scope="row">Số điện thoại</th>
+            <td><input id="so_dien_thoai" type="text" value="" min="100000000" max="9999999999"></td> 
+          </tr>
+          <tr>
+            <th scope="row">Địa chỉ</th>
+            <td><input id="dia_chi" type="text" value=""></td> 
+          </tr>
+          <tr>
+            <th scope="row">Sở thích</th>
+            <td><input id="so_thich" type="text" value=""></td> 
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
+    <div>
+        <table id="table_dtb" class="table " readonly>
+            <thead class="table-light">
+              <tr>
+                <th colspan="2" scope="col">Thông tin của bạn </th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row"></th>
+                    <td><img id="img_dtb" src="" alt="" style="width: 50px; height: 50px;">
+                  </tr>
+              <tr>
+                <th scope="row">Họ và tên:</th>
+                <td><input id="ho_ten_dtb" type="text" value=""></td> 
+              </tr>
+              <tr>
+                <th scope="row">Tuổi</th>
+                <td><input id="tuoi_dtb" type="number" value="" min="1" max="130"></td> 
+              </tr>
+              <tr>
+                <th scope="row">Cung hoàng đạo</th>
+                <td><input id="cung_hoang_dao_dtb" type="text" value=""></td> 
+              </tr>
+              <tr>
+                <th scope="row">Số điện thoại</th>
+                <td><input id="so_dien_thoai_dtb" type="text" value="" min="100000000" max="9999999999"></td> 
+              </tr>
+              <tr>
+                <th scope="row">Địa chỉ</th>
+                <td><input id="dia_chi_dtb" type="text" value=""></td> 
+              </tr>
+              <tr>
+                <th scope="row">Sở thích</th>
+                <td><input id="so_thich_dtb" type="text" value=""></td> 
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <button onclick="alert('ok')" !important>dong y</button>
+        <button>khong</button>
     <script   src="/btl_fix/JS/changeFemale.js" ></script>
     <script   src="/btl_fix/JS/changeMale.js" ></script>
     <script  src="/btl_fix/JS/script.js"></script>
