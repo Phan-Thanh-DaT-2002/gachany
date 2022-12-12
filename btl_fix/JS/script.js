@@ -1,4 +1,4 @@
-const userGetId =  Math.floor(Math.random()*10);
+const userGetId = Math.floor(Math.random() * 10);
 $("input").attr('readonly', true);
 
 function getRandomArbitrary(min, max) {
@@ -20,14 +20,14 @@ if (database === 'male') {
 else if (database === 'female') {
 	db = 'http://localhost:3000/dsgacha_nu';
 	var new_user_male = JSON.parse(localStorage.getItem('new_user_male'));
-	newUser= new_user_male;
-	db_con_lai ='http://localhost:3000/dsgacha_nam';
+	newUser = new_user_male;
+	db_con_lai = 'http://localhost:3000/dsgacha_nam';
 	dien_thong_tin(new_user_male);
 }
 
 
 var length_database;
-axios.get(db).then( function (response) {
+axios.get(db).then(function (response) {
 	length_database = response.data.length;
 
 	let imgs = ``;
@@ -35,32 +35,48 @@ axios.get(db).then( function (response) {
 		imgs += `<dd><img src=" ${response.data[i].anh}" /></dd>`;
 	}
 	document.getElementById('anhs').innerHTML = imgs;
-show(response.data[userGetId]);
+	show(response.data[userGetId]);
 });
 
 
 $(document).ready(function () {
-	setInterval(function () {
-		$('#yes').click(function(){
+	
+		$('#yes').click(function () {
 			alert('Chúc các bạn có thể tiến đến được với nhau ^.^!')
 			$('#yes').css('display', 'none');
 			$('#no').css('display', 'none');
-			axios.delete(db +`/${userGetId}`, ) // movie = ID of the movie entry in mySQL
-    .then(res => {return res});
-		});
-		
-		$('#no').click(function(){
-			confirm('Vậy bạn có muốn thêm vào database của chúng tôi không?')
-			$('#yes').css('display', 'none');
-			$('#no').css('display', 'none');
-			
-				axios.post(db_con_lai,newUser)
+			axios.delete(db + `/${userGetId}`,) // movie = ID of the movie entry in mySQL
 				.then(res => {
-					window.location.replace('http://127.0.0.1:5500/btl_fix/HTML/test.html')
-					return res;
+					window.location.replace('http://127.0.0.1:5500/btl_fix/HTML/test.html');
+					return res
 				});
 		});
 
+		$('#no').click(function () {
+			$('#t_t').css('display', 'block');
+			// t_t();
+			// function t_t() {
+			// 	if (document.getElementById('t_t').style.display === 'block') {
+			// 	document.getElementById('t_t').style.display = 'none';
+			// 	}
+			// 	else document.getElementById('t_t').style.display = 'block';
+			// }
+			$('#yes').css('display', 'none');
+			$('#no').css('display', 'none');
+			$('#co').click(function () {
+				axios.post(db_con_lai, newUser)
+				.then(res => {
+				window.location.replace('http://127.0.0.1:5500/btl_fix/HTML/test.html')
+				return res;
+				});
+			})
+			$('#khong').click(function () {
+				window.location.replace('http://127.0.0.1:5500/btl_fix/HTML/test.html')
+			})
+			
+		
+		});
+		setInterval(function () {
 		var screenHeight = $(document).height();
 		var screenWidth = $(document).width();
 		var startLeft = getRandomArbitrary(0, screenWidth);
@@ -153,7 +169,7 @@ window.onload = function () {
 	}
 }
 
-function dien_thong_tin(oject){
+function dien_thong_tin(oject) {
 	$('#ho_ten').val(oject.ho_ten);
 	$('#tuoi').val(oject.tuoi);
 	$('#cung_hoang_dao').val(oject.cung_hoang_dao);
@@ -161,13 +177,14 @@ function dien_thong_tin(oject){
 	$('#dia_chi').val(oject.dia_chi);
 	$('#so_thich').val(oject.so_thich);
 }
-function show(dtb){
-	$('#ho_ten_dtb').val(dtb.name);
-	$('#tuoi_dtb').val(dtb.age);
-	$('#cung_hoang_dao_dtb').val(dtb.cunghoangdao);
-	$('#so_dien_thoai_dtb').val(dtb.SDT);
-	$('#dia_chi_dtb').val(dtb.diachi);
-	$('#so_thich_dtb').val(dtb.Sothich);
-	$('#img_dtb').attr('src',dtb.anh);
+function show(dtb) {
+	setTimeout(function () {
+		$('#ho_ten_dtb').val(dtb.name);
+		$('#tuoi_dtb').val(dtb.age);
+		$('#cung_hoang_dao_dtb').val(dtb.cunghoangdao);
+		$('#so_dien_thoai_dtb').val(dtb.SDT);
+		$('#dia_chi_dtb').val(dtb.diachi);
+		$('#so_thich_dtb').val(dtb.Sothich);
+		$('#img_dtb').attr('src', dtb.anh);
+	}, 9000);
 }
-

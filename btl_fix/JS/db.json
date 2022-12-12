@@ -110,7 +110,6 @@
       "Sothich": "Trùm trường với biệt hiểu Cường Ảo ma.",
       "anh": "/btl_fix/images/20.jpg"
     }
-
   ],
   "dsgacha_nu": [
     {
@@ -213,7 +212,7 @@
       "anh": "/btl_fix/images/9.jpeg"
     },
     {
-      "id":9,
+      "id": 9,
       "name": "Nguyễn Thị Trang Nhung",
       "sex": "Nữ",
       "age": "20",
