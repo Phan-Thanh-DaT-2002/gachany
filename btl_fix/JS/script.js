@@ -1,4 +1,3 @@
-const userGetId = Math.floor(Math.random() * 10);
 $("input").attr('readonly', true);
 
 function getRandomArbitrary(min, max) {
@@ -28,59 +27,62 @@ else if (database === 'female') {
 	db_con_lai = 'http://localhost:3000/dsgacha_nam';
 	dien_thong_tin(new_user_male);
 }
-
-
+var userGetId;
+var arr = [];
 var length_database;
 axios.get(db).then(function (response) {
 	length_database = response.data.length;
-
 	let imgs = ``;
 	for (var i = 0; i < response.data.length; i++) {
 		imgs += `<dd><img src=" ${response.data[i].anh}" /></dd>`;
+		arr.push(response.data[i].id);
+		// alert(response.data[i].id);
 	}
 	document.getElementById('anhs').innerHTML = imgs;
+	userGetId = arr[Math.floor(Math.random() * arr.length)];
 	show(response.data[userGetId]);
 });
-
+ 
 
 $(document).ready(function () {
-	
-		$('#yes').click(function () {
-			alert('Chúc các bạn có thể tiến đến được với nhau ^.^!')
-			$('#yes').css('display', 'none');
-			$('#no').css('display', 'none');
-			axios.delete(db + `/${userGetId}`,) 
-				.then(res => {
-					window.location.replace('http://127.0.0.1:5500/btl_fix/HTML/test.html');
-					return res
-				});
-		});
 
-		$('#no').click(function () {
-			$('#t_t').css('display', 'block');
-			// t_t();
-			// function t_t() {
-			// 	if (document.getElementById('t_t').style.display === 'block') {
-			// 	document.getElementById('t_t').style.display = 'none';
-			// 	}
-			// 	else document.getElementById('t_t').style.display = 'block';
-			// }
-			$('#yes').css('display', 'none');
-			$('#no').css('display', 'none');
-			$('#co').click(function () {
-				axios.post(db_con_lai, newUser)
-				.then(res => {
-				window.location.replace('http://127.0.0.1:5500/btl_fix/HTML/test.html')
-				return res;
-				});
-			})
-			$('#khong').click(function () {
-				window.location.replace('http://127.0.0.1:5500/btl_fix/HTML/test.html')
-			})
-			
 
-		});
-		setInterval(function () {
+	$('#yes').click(function () {
+		alert('Chúc các bạn có thể tiến đến được với nhau ^.^!')
+		$('#yes').css('display', 'none');
+		$('#no').css('display', 'none');
+		axios.delete(db + `/${userGetId}`,)
+			.then(res => {
+				window.location.replace('http://127.0.0.1:5500/btl_fix/HTML/test.html');
+				return res
+			});
+	});
+
+	$('#no').click(function () {
+		$('#t_t').css('display', 'block');
+		// t_t();
+		// function t_t() {
+		// 	if (document.getElementById('t_t').style.display === 'block') {
+		// 	document.getElementById('t_t').style.display = 'none';
+		// 	}
+		// 	else document.getElementById('t_t').style.display = 'block';
+		// }
+		$('#yes').css('display', 'none');
+		$('#no').css('display', 'none');
+		$('#co').click(function () {
+			axios.post(db_con_lai, newUser)
+				.then(res => {
+					window.location.replace('http://127.0.0.1:5500/btl_fix/HTML/test.html')
+					return res;
+				});
+		})
+		$('#khong').click(function () {
+			window.location.replace('http://127.0.0.1:5500/btl_fix/HTML/test.html')
+		})
+
+
+	});
+	setInterval(function () {
 		var screenHeight = $(document).height();
 		var screenWidth = $(document).width();
 		var startLeft = getRandomArbitrary(0, screenWidth);

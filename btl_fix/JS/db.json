@@ -112,6 +112,17 @@
     }
   ],
   "dsgacha_nu": [
+    { 
+       "id": 0,
+      "name": "Phạm Thị Thu Hà",
+      "sex": "Nữ",
+      "age": "21",
+      "cunghoangdao": "Song tử",
+      "SDT": "0918743xxx",
+      "diachi": "Hải Phòng",
+      "Sothich": "Thích săn sale.",
+      "anh": "/btl_fix/images/1.jpeg"
+    },
     {
       "id": 1,
       "name": "Nguyễn Thị Hồng Hạnh",
@@ -155,6 +166,17 @@
       "diachi": "Lạng Sơn",
       "Sothich": "Thích đam mĩ.",
       "anh": "/btl_fix/images/5.jpeg"
+    },
+    {
+      "id": 5,
+      "name": "Trịnh Thị Diệp Anh",
+      "sex": "Nữ",
+      "age": "20",
+      "cunghoangdao": "Sư tử",
+      "SDT": "0918943xxx",
+      "diachi": "Thái Nguyên",
+      "Sothich": "Không ngán ai bao giờ.",
+      "anh": "/btl_fix/images/6.jpeg"
     },
     {
       "id": 6,
