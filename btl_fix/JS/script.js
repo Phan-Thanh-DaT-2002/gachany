@@ -1,3 +1,4 @@
+const userGetId =  Math.floor(Math.random()*10);
 $("input").attr('readonly', true);
 
 function getRandomArbitrary(min, max) {
@@ -24,39 +25,41 @@ else if (database === 'female') {
 	dien_thong_tin(new_user_male);
 }
 
-$('#yes').click(function(){
-	alert('Chúc các bạn có thể tiến đến được với nhau ^.^!')
-	$('#yes').css('display', 'none');
-	$('#no').css('display', 'none');
-});
 
-$('#no').click(function(){
-	confirm('Vậy bạn có muốn thêm vào database của chúng tôi không?')
-	$('#yes').css('display', 'none');
-	$('#no').css('display', 'none');
-	
-		axios.post(db_con_lai,newUser)
-		.then(res => {
-			window.location.replace('http://127.0.0.1:5500/btl_fix/HTML/test.html')
-			return res;
-		});
-});
-
-
-axios.get(db).then(function (response) {
+var length_database;
+axios.get(db).then( function (response) {
+	length_database = response.data.length;
 
 	let imgs = ``;
 	for (var i = 0; i < response.data.length; i++) {
 		imgs += `<dd><img src=" ${response.data[i].anh}" /></dd>`;
 	}
 	document.getElementById('anhs').innerHTML = imgs;
-
-show(response.data[Math.floor(Math.random()*10)]);
-})
+show(response.data[userGetId]);
+});
 
 
 $(document).ready(function () {
 	setInterval(function () {
+		$('#yes').click(function(){
+			alert('Chúc các bạn có thể tiến đến được với nhau ^.^!')
+			$('#yes').css('display', 'none');
+			$('#no').css('display', 'none');
+			axios.delete(db +`/${userGetId}`, ) // movie = ID of the movie entry in mySQL
+    .then(res => {return res});
+		});
+		
+		$('#no').click(function(){
+			confirm('Vậy bạn có muốn thêm vào database của chúng tôi không?')
+			$('#yes').css('display', 'none');
+			$('#no').css('display', 'none');
+			
+				axios.post(db_con_lai,newUser)
+				.then(res => {
+					window.location.replace('http://127.0.0.1:5500/btl_fix/HTML/test.html')
+					return res;
+				});
+		});
 
 		var screenHeight = $(document).height();
 		var screenWidth = $(document).width();

@@ -1,7 +1,7 @@
 {
   "dsgacha_nam": [
     {
-      "id": 1,
+      "id": 0,
       "name": "Nguyễn Hoàng Anh",
       "sex": "Nam",
       "age": "20",
@@ -12,7 +12,7 @@
       "anh": "/btl_fix/images/11.jpg"
     },
     {
-      "id": 2,
+      "id": 1,
       "name": "Dương Thành Công",
       "sex": "Nam",
       "age": "20",
@@ -23,7 +23,7 @@
       "anh": "/btl_fix/images/12.jpg"
     },
     {
-      "id": 3,
+      "id": 2,
       "name": "Lê Xuân Minh Công",
       "sex": "Nam",
       "age": "21",
@@ -34,7 +34,7 @@
       "anh": "/btl_fix/images/13.jpg"
     },
     {
-      "id": 4,
+      "id": 3,
       "name": "Đặng Danh Cường",
       "sex": "Nam",
       "age": "20",
@@ -45,7 +45,7 @@
       "anh": "/btl_fix/images/14.jpg"
     },
     {
-      "id": 5,
+      "id": 4,
       "name": "Nguyễn Minh Hiếu",
       "sex": "Nam",
       "age": "22",
@@ -56,7 +56,7 @@
       "anh": "/btl_fix/images/15.jpg"
     },
     {
-      "id": 6,
+      "id": 5,
       "name": "Hoàng Quý Hào",
       "sex": "Nam",
       "age": "22",
@@ -67,7 +67,7 @@
       "anh": "/btl_fix/images/16.jpg"
     },
     {
-      "id": 7,
+      "id": 6,
       "name": "Phùng Bá Công",
       "sex": "Nam",
       "age": "21",
@@ -78,7 +78,7 @@
       "anh": "/btl_fix/images/17.jpg"
     },
     {
-      "id": 8,
+      "id": 7,
       "name": "Phan Thành Đạt",
       "sex": "Nam",
       "age": "20",
@@ -89,7 +89,7 @@
       "anh": "/btl_fix/images/18.jpg"
     },
     {
-      "id": 9,
+      "id": 8,
       "name": "Đỗ Văn Hảo",
       "sex": "Nam",
       "age": "20",
@@ -100,7 +100,7 @@
       "anh": "/btl_fix/images/19.jpg"
     },
     {
-      "id": 10,
+      "id": 9,
       "name": "Hoàng Đức Cường",
       "sex": "Nam",
       "age": "20",
@@ -114,7 +114,7 @@
   ],
   "dsgacha_nu": [
     {
-      "id": 1,
+      "id": 0,
       "name": "Phạm Thị Thu Hà",
       "sex": "Nữ",
       "age": "21",
@@ -125,7 +125,7 @@
       "anh": "/btl_fix/images/1.jpeg"
     },
     {
-      "id": 2,
+      "id": 1,
       "name": "Nguyễn Thị Hồng Hạnh",
       "sex": "Nữ",
       "age": "20",
@@ -136,7 +136,7 @@
       "anh": "/btl_fix/images/2.jpeg"
     },
     {
-      "id": 3,
+      "id": 2,
       "name": "Dương Thị Trà My",
       "sex": "Nữ",
       "age": "20",
@@ -147,7 +147,7 @@
       "anh": "/btl_fix/images/3.jpeg"
     },
     {
-      "id": 4,
+      "id": 3,
       "name": "Trần Thị Thuận",
       "sex": "Nữ",
       "age": "20",
@@ -158,7 +158,7 @@
       "anh": "/btl_fix/images/4.jpeg"
     },
     {
-      "id": 5,
+      "id": 4,
       "name": "Đỗ Linh Trang",
       "sex": "Nữ",
       "age": "21",
@@ -169,7 +169,7 @@
       "anh": "/btl_fix/images/5.jpeg"
     },
     {
-      "id": 6,
+      "id": 5,
       "name": "Trịnh Thị Diệp Anh",
       "sex": "Nữ",
       "age": "20",
@@ -180,7 +180,7 @@
       "anh": "/btl_fix/images/6.jpeg"
     },
     {
-      "id": 7,
+      "id": 6,
       "name": "Phùng Thị Mai Anh",
       "sex": "Nữ",
       "age": "20",
@@ -191,7 +191,7 @@
       "anh": "/btl_fix/images/7.jpeg"
     },
     {
-      "id": 8,
+      "id": 7,
       "name": "Nguyễn Thị Phương Hậu",
       "sex": "Nữ",
       "age": "20",
@@ -202,7 +202,7 @@
       "anh": "/btl_fix/images/8.jpeg"
     },
     {
-      "id": 9,
+      "id": 8,
       "name": "Phan Thị Thùy Linh",
       "sex": "Nữ",
       "age": "21",
@@ -213,7 +213,7 @@
       "anh": "/btl_fix/images/9.jpeg"
     },
     {
-      "id": 10,
+      "id":9,
       "name": "Nguyễn Thị Trang Nhung",
       "sex": "Nữ",
       "age": "20",
