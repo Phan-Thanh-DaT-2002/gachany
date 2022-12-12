@@ -45,7 +45,7 @@ $(document).ready(function () {
 			alert('Chúc các bạn có thể tiến đến được với nhau ^.^!')
 			$('#yes').css('display', 'none');
 			$('#no').css('display', 'none');
-			axios.delete(db + `/${userGetId}`,) // movie = ID of the movie entry in mySQL
+			axios.delete(db + `/${userGetId}`,) 
 				.then(res => {
 					window.location.replace('http://127.0.0.1:5500/btl_fix/HTML/test.html');
 					return res
@@ -129,7 +129,7 @@ window.onload = function () {
 	deal(dds, dds.length - 1);
 	window.onmousedown = function (e) {
 		e = e || window.event;
-		var mouseX = e.clientX, mouseY = e.clientY;
+		// var mouseX = e.clientX, mouseY = e.clientY;
 		var transform = dl.style.transform;
 		var rotateX = transform.substr(transform.indexOf('rotateX(') + 8);
 		var rotateY = transform.substr(transform.indexOf('rotateY(') + 8);
