@@ -4,6 +4,10 @@ $("input").attr('readonly', true);
 function getRandomArbitrary(min, max) {
 	return Math.floor(Math.random() * (max - min)) + min;
 }
+
+setTimeout(function () {
+	$('.loading').css('display', 'none');
+}, 9000);
 var database = localStorage.getItem('database');
 
 
@@ -74,7 +78,7 @@ $(document).ready(function () {
 				window.location.replace('http://127.0.0.1:5500/btl_fix/HTML/test.html')
 			})
 			
-		
+
 		});
 		setInterval(function () {
 		var screenHeight = $(document).height();
