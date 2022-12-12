@@ -6,7 +6,7 @@ function getRandomArbitrary(min, max) {
 
 setTimeout(function () {
 	$('.loading').css('display', 'none');
-}, 9000);
+}, 7000);
 var database = localStorage.getItem('database');
 
 
