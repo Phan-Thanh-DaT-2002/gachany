@@ -18,19 +18,19 @@ body{
 }
 .header p{
   color: rgb(250, 32, 104);
-  font-size: 22px;
+  font-size: 30px;
 }
 .logo{
   background: -webkit-linear-gradient(15deg, rgb(240, 255, 107) , rgb(255, 141, 168), rgb(255, 0, 170));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #ffffffbd;
 
 }
 .content {
   height: 75vh;
   /* background-color: blue; */
 }
-
 
 .infoMale {
   /* background-color: rgb(0, 255, 64); */
@@ -138,11 +138,32 @@ th {
 .gachany{
   width:20vh;
   height:20vhx;
-  margin:0 auto;
-  background:#ffffff;
+  margin:0;
+  padding: 0;
   position:absolute;
   left:50%;
   top:50%;
-  margin-left:-250px;
-  margin-top:-250px;
+  transform: translate(-50%, -50%);
+
 }
+.gachany a{
+  font-size: 30px;
+  text-decoration: none;
+  font-weight: bold;
+
+}
+.gachany i{
+  color: pink;
+}
+.btn{
+  --bs-btn-padding-x: 1.5rem;
+  --bs-btn-padding-y: 0.750rem;
+  box-shadow: 2px 2px 8px 0 rgb(0 0 0 / 40%);
+}
+.btn-outline-danger {
+  --bs-btn-hover-bg: rgb(235, 235, 235);
+  background-color: white;
+  border-radius: 0.5rem;
+
+}
+

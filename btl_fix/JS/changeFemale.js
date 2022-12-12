@@ -29,13 +29,13 @@ function changeFemale() {
       dia_chi, so_thich, anh: null,
     }
   
-    if (ho_ten === '' || tuoi === '' || cung_hoang_dao === '' || so_dien_thoai === '' || dia_chi === '' || so_thich === '') { alert('bạn chưa nhập đủ thông tin') }
+    if (ho_ten === '' || tuoi === '' || cung_hoang_dao === '' || so_dien_thoai === '' || dia_chi === '' || so_thich === '') { alert('Bạn chưa nhập đủ thông tin') }
     else if (check_name(ho_ten) === false) {
-      alert('họ và tên phải trên 1 từ chứ bạn nhỉ');
+      alert('Họ và tên phải trên 1 từ chứ bạn nhỉ???');
     }
     else if (tuoi < 14 || tuoi > 30) {
-      if (tuoi < 14) { alert('học hành đi yêu đương gì tuổi này') }
-      else if (tuoi > 30) { alert('các bác kiếm vợ đi chứ kiếm người yêu gì nữa') }
+      if (tuoi < 14) { alert('Học hành đi yêu đương gì tuổi này') }
+      else if (tuoi > 30) { alert('Các bác kiếm chồng đi chứ kiếm người yêu gì nữa') }
     }
     else {
       $('#ho_ten_female').val(ho_ten);
@@ -61,7 +61,7 @@ function changeFemale() {
             localStorage.setItem('database',"male");
             localStorage.setItem('new_user_female', JSON.stringify(new_user_female));
             console.log(new_user_female);
-          }, 3000)
+          }, 500)
       }, 1000);
     }
   }

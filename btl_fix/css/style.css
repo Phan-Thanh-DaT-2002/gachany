@@ -4,18 +4,23 @@
 	padding: 0;
 }
 img{
-  pointer-events: none;
+	margin: 5px 0;
+	pointer-events: none;
+	box-shadow: 2px 2px 8px 0 rgba(255, 255, 255, 0.4);
 }
 body{
 	position: relative;
-    background-color: #000;
+    background-color: rgb(0, 0, 0);
     overflow: hidden;
+
 }
 dl {
 	width: 230px;
 	height: 340px;
 	position: relative;
-	margin: 150px auto 0;
+	top: 70%;
+	left: 40%;
+	transform: translate(-50%, -50%);
 	-webkit-transform-style: -webkit-preserve-3d;
 	transform-style: preserve-3d;
 }
@@ -25,6 +30,39 @@ dd {
 	position: absolute;
 	top: 0;
 	left: 0;
+	margin-left: 46px;
+}
+.row{
+	margin-left: -55px;
+	--bs-gutter-x: 1.5rem;
+}
+.table {
+
+	transform: translateY(-250px);
+    background-color: rgb(252, 204, 212);
+	box-shadow: 4px 4px 16px 0 rgba(255, 255, 255, 0.4);
+	text-align: left;
+
+}
+th{
+	border: 1px solid #ffffff;
+	border-right: none;
+
+}
+
+td{
+	border: 1px solid #ffffff;
+	border-left: none;
+	vertical-align: middle;
+
+}
+.table-light{
+--bs-table-bg:rgb(252, 204, 212);
+border: 1px solid #ffffff;
+text-align: center;
+}
+.btn-warning {
+    --bs-btn-color: #fff;
 }
 img{width:100%;height:100%;}
 
@@ -95,6 +133,15 @@ img{width:100%;height:100%;}
 	}
 }
 .show{
+	margin: 15px 0px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+}
+.show button{
+	width: 100px;
+	height: 60px;
+	box-shadow: 4px 4px 16px 0 rgba(255, 255, 255, 0.4);
+}
+.show #yes{
+	margin-right: 100px;
 }

@@ -25,12 +25,13 @@ else if (database === 'female') {
 }
 
 $('#yes').click(function(){
+	alert('Chúc các bạn có thể tiến đến được với nhau ^.^!')
 	$('#yes').css('display', 'none');
 	$('#no').css('display', 'none');
 });
 
 $('#no').click(function(){
-	alert('nếu không thì bạn sẽ không được quay tiếp và bạn sẽ vào database của chúng tôi?')
+	confirm('Vậy bạn có muốn thêm vào database của chúng tôi không?')
 	$('#yes').css('display', 'none');
 	$('#no').css('display', 'none');
 	
@@ -89,7 +90,7 @@ $(document).ready(function () {
 					});
 				}
 			});
-	}, 500);
+	}, 1000);
 });
 window.onload = function () {
 	var dds = document.getElementsByTagName('dd');

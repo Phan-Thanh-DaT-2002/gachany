@@ -6,7 +6,7 @@ function changeMale() {
 function lay_thong_tin_male() {
   $('#t_t').append(` 
   <div class="center_bt_check">
-  <button id="check_changeMale" type="button" onclick="check_changeMale();" class="btn btn-success">nhap</button> 
+  <button id="check_changeMale" type="button" onclick="check_changeMale();" class="btn btn-success">Nhập</button> 
   <br>
   <button type="button" id="huy_male" onclick="huy();" class="btn btn-outline-danger">Hủy</button>
 </div>
@@ -28,13 +28,13 @@ function check_changeMale() {
     dia_chi, so_thich, anh: null,
   }
  
-  if (ho_ten === '' || tuoi === '' || cung_hoang_dao === '' || so_dien_thoai === '' || dia_chi === '' || so_thich === '') { alert('bạn chưa nhập đủ thông tin') }
+  if (ho_ten === '' || tuoi === '' || cung_hoang_dao === '' || so_dien_thoai === '' || dia_chi === '' || so_thich === '') { alert('Bạn chưa nhập đủ thông tin') }
   else if (check_name(ho_ten) === false) {
-    alert('họ và tên phải trên 1 từ chứ bạn nhỉ');
+    alert('Họ và tên phải trên 1 từ chứ bạn nhỉ');
   }
   else if (tuoi < 14 || tuoi > 30) {
-    if (tuoi < 14) { alert('học hành đi yêu đương gì tuổi này') }
-    else if (tuoi > 30) { alert('các bác kiếm vợ đi chứ kiếm người yêu gì nữa') }
+    if (tuoi < 14) { alert('Học hành đi yêu đương gì tuổi này') }
+    else if (tuoi > 30) { alert('Các bác kiếm vợ đi chứ kiếm người yêu gì nữa') }
   }
   else {
     $('#ho_ten_male').val(ho_ten);
@@ -59,7 +59,7 @@ function check_changeMale() {
         localStorage.setItem('database', "female");
         localStorage.setItem('new_user_male', JSON.stringify(new_user_male));
         console.log(new_user_male);
-      }, 3000)
+      }, 500)
     }, 1000);
   }
 }
